@@ -14,7 +14,8 @@ public class TaskMapper {
         return new Task(
                 taskDto.getId(),
                 taskDto.getTitle(),
-                taskDto.getContent()
+                taskDto.getContent(),
+                taskDto.getListId()
         );
     }
 
@@ -22,7 +23,8 @@ public class TaskMapper {
         return new TaskDto(
                 task.getId(),
                 task.getTitle(),
-                task.getContent()
+                task.getContent(),
+                task.getListId()
         );
     }
 

@@ -23,4 +23,7 @@ public class Task {
 
     @Column(name = "description")
     private String content;
+
+    @Column(name = "listId")
+    private String listId;
 }
