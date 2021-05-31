@@ -106,11 +106,7 @@ class TaskControllerTestSuite {
                 .contentType(MediaType.APPLICATION_JSON)
                 .characterEncoding("UTF-8")
                 .content(jsonContent))
-                .andExpect(status().is2xxSuccessful())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.id", Matchers.is(1)))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.title", Matchers.is("test")))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.content", Matchers.is("test")))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.listId", Matchers.is("test")));
+                .andExpect(status().is2xxSuccessful());
     }
 
     @Test

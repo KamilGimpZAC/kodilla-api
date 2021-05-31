@@ -24,15 +24,21 @@ class TrelloMapperTestSuite {
     @Test
     public void testMapToBoards(){
         //Given
-        TrelloBoardDto trelloBoard1 = new TrelloBoardDto("1","test", new ArrayList<>());
+        TrelloBoardDto trelloBoard1 = new TrelloBoardDto();
         TrelloBoardDto trelloBoard2 = new TrelloBoardDto("2", "test2", new ArrayList<>());
+        trelloBoard1.setId("1");
+        trelloBoard1.setName("test");
+        trelloBoard1.setLists(new ArrayList<>());
         List<TrelloBoardDto> trelloBoards = new ArrayList<>();
         trelloBoards.add(trelloBoard1);
         trelloBoards.add(trelloBoard2);
         //When
         List<TrelloBoard> output = trelloMapper.mapToBoards(trelloBoards);
+        TrelloBoard trelloBoard = output.get(0);
         //Then
         assertEquals(2,output.size());
+        assertEquals(trelloBoard1.getId(), trelloBoard.getId());
+        assertEquals(trelloBoard1.getName(), trelloBoard.getName());
     }
 
     @Test
