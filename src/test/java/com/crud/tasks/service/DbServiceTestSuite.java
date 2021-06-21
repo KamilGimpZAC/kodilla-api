@@ -95,5 +95,11 @@ class DbServiceTestSuite {
         dbService.deleteTask(output.getId());
         //Then
         assertEquals(0, taskRepository.count());
+        //Cleanup
+        try {
+            taskRepository.deleteAll();
+        } catch (Exception e){
+            //do nothing
+        }
     }
 }
