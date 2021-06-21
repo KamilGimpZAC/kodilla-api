@@ -1,19 +1,13 @@
 package com.crud.tasks.service;
 
-import com.crud.tasks.mapper.TrelloMapper;
 import com.crud.tasks.trello.client.CreatedTrelloCardDto;
 import com.crud.tasks.trello.client.TrelloCardDto;
 import com.crud.tasks.trello.client.TrelloClient;
-import com.crud.tasks.trello.facade.TrelloFacade;
-import com.crud.tasks.trello.validator.TrelloValidator;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.condition.DisabledIfSystemProperties;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
